@@ -29,34 +29,35 @@
          align-items: center;
          list-style: none;
          li {
-          display: inline-block;
-          width: 20px;
-          height: 20px;
-          position: relative;
-          @include transition(width,height);
-          transform-origin: center;
+          line-height: 0;
+          
           &.slick-active {
-            width: 39px;
-            height: 39px;
+            
             button {
-              display: flex;
-              align-items: center;
-              justify-content: center;
+              
+              
               &:before {
                 border-width: 3px;
                 height: 33px;
                 width: 33px;
               }
               &:after {
-                transform: scale(1);
+                transform: translate(-50%,-50%) scale(1);
+                
               }
             }
           }
            button {
              font-size: 0;
              line-height: 0;
-             
+             display: flex;
+             align-items: center;
+             justify-content: center;
+            padding: 0;
+            position: relative;
              background: none;
+             height: 39px;
+              width: 39px;
              &:before {
               display: block;
               content: '';
@@ -66,8 +67,11 @@
               border: 5px solid $yellow;
               border-radius: 50%;
               line-height: 1;
-              
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%,-50%);
               @include transition(width,height);
+              transform-origin: center;
              }
              &:after {
               display: block;
@@ -78,8 +82,9 @@
               
               height: 27px;
                 width: 27px;
-              
-              transform: scale(0);
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%,-50%) scale(0);
               @include transition(transform);
               transform-origin: center;
              }
