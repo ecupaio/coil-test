@@ -4,45 +4,75 @@ body {
 	padding:0;
 	overflow-x: hidden;
 	font-family: $body-font;
-	font-size: 16px;
+	font-size: 20px;
 	color: $text_color;
-	line-height: 1.5;
+	line-height: 34.5px;
+	font-weight: 300;
 }
 * {
 	box-sizing: border-box; 
 }
 //Default Fonts
-h1, h2, h3, h4, h5,h6 {
+h1, h2, h3, h4, h5,h6, [class*="heading-"] {
 	font-family: $header-font;
 	margin: 0;
-	
-	line-height: normal;
-}
-h1 {
-	font-size: 4rem;
+	font-weight: 700;
+	color: inherit;
+	line-height: 1;
 }
 
-h2 {
+h1, .heading-1 {
+	font-size: 50px;
+	
+}
+
+h2, .heading-2 {
 	font-size:  3.5rem;
+	@include bp-small {
+		font-size: 3rem;
+	}
 }
-h3 {
+
+h3, .heading-3 {
 	font-size: 3rem;
+	@include bp-small {
+		font-size: 2.5rem;
+	}
 }
-h4 {
+h4, .heading-4 {
 	font-size: 2.5rem;
+	@include bp-small {
+		font-size: 2.25rem;
+	}
 }
-h5 {
+
+h5, .heading-5 {
 	font-size: 2rem;
 }
-h6 {
+
+h6, .heading-6 {
 	font-size: 1.5rem;
 }
 
-.large {
-	font-size: 1.25rem;
+.mono {
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 400;
 }
+
+.bold {
+	font-weight: 700;
+}
+.semi-bold {
+	font-weight: 500;
+}
+
+.large {
+	font-size: 23px;
+	line-height: 33px;
+}
+
 .small {
-	font-size: 0.75rem;
+	font-size: 17px;
 }
 
 //Links
@@ -96,4 +126,14 @@ button,.btn {
 
 .hidden {
 	display: none !important;
+}
+
+//sections 
+section {
+	padding: 1.8rem;
+	.inner-section {
+		max-width: $size-large;
+		margin: auto;
+		width: 100%;
+	}
 }

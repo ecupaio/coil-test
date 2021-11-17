@@ -4,4 +4,81 @@ layout: default
 permalink: /
 css: home
 content-id: home
+slick: true
+scripts: 
+- home
+hero: 
+  subtitle: July - Sept 2019
+  title: "Workforce Sprint"
+  text: "Solve problems for American workers, businesses, investors, and communities by catalyzing cross-sector collaboration."
+timeline: 
+- startdate: 2021-07-01
+  enddate: 2021-07-05
+  events: 
+  - title: "Join our Slack Community"
+    text: "New to Slack? Check out this page to get some tips on getting started" 
+    date: 
+  - title: "Optional User Engagement Workshop in Chicago" 
+    text: "Join an incredible group of TOP participants in an interactive workshop to get a deeper understanding of how the program will unfold, and a preview of the next 12 weeks"
+    date: 2021-07-02
+- startdate: 2021-07-08
+  enddate: 2021-07-12
+  events: 
+  - title: "Problem Statement Orientation"
+    text: "Dive into the weeds about your problem statement, and get more information about the goals of each challenge" 
+    date: 
+  - title: "User Research" 
+    text: "In parallel to learning about the problem statements, learn more about the communities that are most affected by them and what their experiences, needs and challenges are like"
+    date: 
 ---
+<section id="hero">
+  <div class="inner-section">
+    <div class="hero-content">
+      <div class="hero-subtitle mono"> {{ page.hero.subtitle }}</div>
+      <h1 class="hero-title">{{ page.hero.title }}</h1>
+      <div class="hero-text large">
+        {{ page.hero.text |  markdownify }}
+      </div>
+    </div>
+    
+  </div>
+</section>
+<section id="timeline-section">
+  <div class="inner-section">
+    <div id="timeline-nav">
+
+    </div>
+    <div id="timeline-slider">
+      {% assign weeks = page.timeline | sort: 'startdate' %}
+      {% for week in weeks %}
+      <div class="week-slide">
+        <div class="week">
+          <div class="week-title-block">
+            <div class="week-title">Week {{ forloop.index0 }}</div>
+            <div class="week-daterange small mono">
+              <span class="date start">{{ week.startdate | date: '%b %e'  }}</span> &ndash; <span class="date end">{{ week.enddate | date: '%b %e' }}</span>
+            </div>
+          </div>
+          <div class="week-events">
+            {% for event in week.events %}
+            <div class="event">
+              <div class="event-title-block">
+                <div class="event-title large semi-bold">{{ event.title }}</div>
+                {% if event.date !='' %}
+                <div class="event-date mono small">
+                  {{ event.date | date: '%b %e' }}
+                </div>
+                {% endif %}
+              </div>
+              <div class="event-text">
+                {{ event.text }}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>        
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
