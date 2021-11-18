@@ -1,8 +1,10 @@
-# Jekyll Template
+# COIL Coding Assignment
+
+[Live site](https://ecupaio.github.io/coil-test/)
 
 ## Setup and initial installation
 
-If this is your first time using the Jekyll Template, you may need to install some dependencies.
+This is based off of the [Jekyll Template](https://github.com/ecupaio/jekyll-template), so make sure you install the dependencies below in order to run on local. 
 
 ### Ruby
 
@@ -122,22 +124,6 @@ Settings for colors, fonts, transition duration, and more can be found in `_vars
 Locally loaded fonts can be imported via the `_fonts.scss` sheet. 
 
 All underscored scss sheets are includes in style.scss
-
-#### PureCSS
-[PureCSS](https://purecss.io/) is the default framework for this template. I just have the [grids](https://purecss.io/grids/) feature enabled for easy layouts. Styles for the grids can be found in `scss/_pure-grid.scss`.
-
-```
-<div class="pure-g>
-<div class="pure-u-1 pure-u-md-1-2">50% column</div>
-<div class="pure-u-1 pure-u-md-1-2">50% column</div>
-</div>
-```
-In the example above: 
-- `pure-g` is the grid container
-- `pure-u-1` is the grid width after the breakpoint is reached (100% width)
-- `pure-u-md-1-2` is the grid width (1-2 = 50%) set for the medium breakpoint (defined as 768px in _vars.scss).
-
-Responsive grids are configured with the breakpoints set in `_vars.scss`. You can change the breakpoint values and the grids will recognize them. 
 
 #### Mixins
 
