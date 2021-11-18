@@ -1,0 +1,149 @@
+#timeline-section {
+  padding: 140px 0;
+  @include bp-medium {
+    padding: 34px 0;
+  }
+  .inner-section {
+    
+    #timeline-nav {
+      
+     .slick-dots {
+       margin: 0;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       list-style: none;
+       padding: 0 1rem;
+       li {
+        line-height: 0;
+        
+        &.slick-active {
+          
+          button {
+            
+            
+            &:before {
+              border-width: 3px;
+              height: 33px;
+              width: 33px;
+            }
+            &:after {
+              transform: translate(-50%,-50%) scale(1);
+              
+            }
+          }
+        }
+        button {
+          font-size: 0;
+          line-height: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0;
+          position: relative;
+          background: none;
+          height: 39px;
+          width: 39px;
+          &:hover {
+            cursor: pointer;
+          }
+          &:before {
+            display: block;
+            content: '';
+            position: absolute;
+            height: 10px;
+            width: 10px;
+            border: 5px solid $yellow;
+            border-radius: 50%;
+            line-height: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            @include transition(width,height);
+            transform-origin: center;
+            backface-visibility: hidden;
+            
+          }
+           &:after {
+            display: block;
+            content: '';
+            position: absolute;
+            background-color: $yellow;
+            border-radius: 50%;
+            height: 27px;
+            width: 27px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%) scale(0);
+            @include transition(transform);
+            transform-origin: center;
+            backface-visibility: hidden;
+            
+           }
+         }
+       }
+     } 
+    }
+    #timeline-slider {
+      padding: 0;
+      margin: 0 -1rem;
+      @include bp-small {
+        margin: 0;
+      }
+      .slick-arrow {
+        background-color: $yellow; 
+      }
+      .week-slide {
+        opacity: 0;
+        @include transition(opacity);
+        &.slick-active {
+          opacity: 1;
+        }
+        .week {
+          @include box-shadow;
+          border-top: 3px solid $yellow;
+          .week-title-block {
+            padding: 2rem 2.9rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            @include bp-small {
+              display: block;
+            }
+            .week-title {
+              font-size: 48px;
+              font-weight: 700;
+              text-transform: uppercase;
+            }
+            .week-daterange {
+              line-height: 1;
+              @include bp-small {
+                margin-top: 0.5rem;
+              }
+            }
+          }
+          .week-events {
+            .event {
+              padding: 1.5rem 2.9rem;
+              border-top: 0.5px solid $yellow;
+              .event-title-block {
+                display: flex;
+                justify-content: space-between;
+                @include bp-medium {
+                  display: block;
+                  .event-date {
+                    margin-bottom: 0.5rem;
+                  }
+                }
+                
+              }
+              .event-text {
+                max-width: 759px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

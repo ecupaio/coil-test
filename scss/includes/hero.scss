@@ -1,0 +1,17 @@
+#hero {
+  min-height: 458px;
+  display: flex;
+  background-color: $blue;
+  color: $white;
+  align-items: center;
+  .hero-content {
+    max-width: 528px;
+    margin: 0 auto 0 0;
+    .hero-subtitle {
+      margin-bottom: 15px;
+    }
+    .hero-title {
+      text-transform: uppercase;
+    }
+  }
+}

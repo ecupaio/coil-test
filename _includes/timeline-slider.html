@@ -1,0 +1,38 @@
+<section id="timeline-section">
+  <div class="inner-section">
+    <div id="timeline-nav">
+    </div>
+    <div id="timeline-slider">
+      {% assign weeks = site.data.timeline | sort: 'startdate' %}
+      {% for week in weeks %}
+      <div class="week-slide">
+        <div class="week">
+          <div class="week-title-block">
+            <div class="week-title">Week {{ forloop.index0 }}</div>
+            <div class="week-daterange small mono">
+              <span class="date start">{{ week.startdate | date: '%b %e'  }}</span> &ndash; <span class="date end">{{ week.enddate | date: '%b %e' }}</span>
+            </div>
+          </div>
+          <div class="week-events">
+            {% for event in week.events %}
+            <div class="event">
+              <div class="event-title-block">
+                <div class="event-title large semi-bold">{{ event.title }}</div>
+                {% if event.date !='' %}
+                <div class="event-date mono small">
+                  {{ event.date | date: '%b %e' }}
+                </div>
+                {% endif %}
+              </div>
+              <div class="event-text">
+                {{ event.text }}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>        
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,63 +1,17 @@
 ---
-title: Home Page
+title: Workforce Sprint
+description: "Solve problems for American workers, businesses, investors, and communities by catalyzing cross-sector collaboration."
 layout: default
 permalink: /
 css: home
 content-id: home
 slick: true
 scripts: 
-- home
+- timeline-slider
 hero: 
   subtitle: July - Sept 2019
   title: "Workforce Sprint"
   text: "Solve problems for American workers, businesses, investors, and communities by catalyzing cross-sector collaboration."
 ---
-<section id="hero">
-  <div class="inner-section">
-    <div class="hero-content">
-      <div class="hero-subtitle mono"> {{ page.hero.subtitle }}</div>
-      <h1 class="hero-title">{{ page.hero.title }}</h1>
-      <div class="hero-text large">
-        {{ page.hero.text |  markdownify }}
-      </div>
-    </div>
-  </div>
-</section>
-<section id="timeline-section">
-  <div class="inner-section">
-    <div id="timeline-nav">
-    </div>
-    <div id="timeline-slider">
-      {% assign weeks = site.data.timeline | sort: 'startdate' %}
-      {% for week in weeks %}
-      <div class="week-slide">
-        <div class="week">
-          <div class="week-title-block">
-            <div class="week-title">Week {{ forloop.index0 }}</div>
-            <div class="week-daterange small mono">
-              <span class="date start">{{ week.startdate | date: '%b %e'  }}</span> &ndash; <span class="date end">{{ week.enddate | date: '%b %e' }}</span>
-            </div>
-          </div>
-          <div class="week-events">
-            {% for event in week.events %}
-            <div class="event">
-              <div class="event-title-block">
-                <div class="event-title large semi-bold">{{ event.title }}</div>
-                {% if event.date !='' %}
-                <div class="event-date mono small">
-                  {{ event.date | date: '%b %e' }}
-                </div>
-                {% endif %}
-              </div>
-              <div class="event-text">
-                {{ event.text }}
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-        </div>        
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+{% include hero.html %}
+{% include timeline-slider.html %}
