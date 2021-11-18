@@ -4,6 +4,16 @@ $(function(){
     slidesToShow: 1,
     arrows: false,
     
-    appendDots: $('#timeline-nav')
+    appendDots: $('#timeline-nav'),
+    responsive: [
+      {
+        breakpoint: 568,
+        settings: {
+          dots: false,
+          arrows: true,
+          adaptiveHeight: true
+        }
+      }
+    ]
   });
 });

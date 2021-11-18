@@ -20,9 +20,13 @@
   }
   #timeline-section {
     padding: 140px 0;
+    @include bp-medium {
+      padding: 34px 0;
+    }
     .inner-section {
       
       #timeline-nav {
+        
        .slick-dots {
          margin: 0;
          display: flex;
@@ -78,6 +82,7 @@
               @include transition(width,height);
               transform-origin: center;
               backface-visibility: hidden;
+              
             }
              &:after {
               display: block;
@@ -93,6 +98,7 @@
               @include transition(transform);
               transform-origin: center;
               backface-visibility: hidden;
+              
              }
            }
          }
@@ -100,6 +106,13 @@
       }
       #timeline-slider {
         padding: 0;
+        margin: 0 -1rem;
+        @include bp-small {
+          margin: 0;
+        }
+        .slick-arrow {
+          background-color: $yellow; 
+        }
         .week-slide {
           opacity: 0;
           @include transition(opacity);
@@ -114,7 +127,9 @@
               display: flex;
               justify-content: space-between;
               align-items: flex-start;
-              
+              @include bp-small {
+                display: block;
+              }
               .week-title {
                 font-size: 48px;
                 font-weight: 700;
@@ -122,7 +137,9 @@
               }
               .week-daterange {
                 line-height: 1;
-                
+                @include bp-small {
+                  margin-top: 0.5rem;
+                }
               }
             }
             .week-events {
@@ -132,6 +149,13 @@
                 .event-title-block {
                   display: flex;
                   justify-content: space-between;
+                  @include bp-medium {
+                    display: block;
+                    .event-date {
+                      margin-bottom: 0.5rem;
+                    }
+                  }
+                  
                 }
                 .event-text {
                   max-width: 759px;
