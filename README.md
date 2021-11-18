@@ -45,7 +45,7 @@ Now you should be able to start your local jekyll server:
 
 `grunt`
 
-Go to `localhost:4000` to see it in action and `localhost:4000/admin` to access the admin panel
+Go to `localhost:4000` to see it in action
 
 ### Configuration of your site
 
@@ -107,11 +107,6 @@ GA Event is a include to simply enter Google Analytics click events. Below is an
 
 *head.html*
 The head element that is on every page. You can add additional scripts and fonts here. Most of the config variables feed into here.
-
-*age-gate.html*
-You can enable this include by setting the age-gate variable in the  _config.yml to true: `age-gate: true`. 
-
-It's conditionally included in the `default.html` above the content. It's also powered by a local javascript file: `js/age-gate.html` and a plugin: [js-cookie](https://github.com/js-cookie/js-cookie). These scripts are also in `default.html` and will only be added when you set the age-gate variable to true. 
 
 ### SCSS
 
