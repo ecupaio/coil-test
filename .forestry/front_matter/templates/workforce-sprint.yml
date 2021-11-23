@@ -1,0 +1,27 @@
+---
+label: Workforce Sprint
+hide_body: true
+fields:
+- type: field_group_list
+  name: Timeline
+  label: Timeline
+  fields:
+  - type: datetime
+    name: startdate
+    label: startdate
+  - type: datetime
+    name: enddate
+    label: enddate
+  - type: field_group_list
+    name: events
+    label: events
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: text
+      label: text
+    - type: text
+      name: date
+      label: date
