@@ -3,7 +3,8 @@
     <div id="timeline-nav">
     </div>
     <div id="timeline-slider">
-      {% assign weeks = site.data.timeline | sort: 'startdate' %}
+      {% assign sprint-page = site.pages | where: "path","_pages/home.html" | first %}
+      {% assign weeks = sprint-page.timeline | sort: 'startdate' %}
       {% for week in weeks %}
       <div class="week-slide">
         <div class="week">

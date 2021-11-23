@@ -1,4 +1,5 @@
-- startdate: 2021-07-01
+- title: Week 0
+  startdate: 2021-07-01
   enddate: 2021-07-05
   events: 
   - title: "Join our Slack Community"
@@ -7,7 +8,8 @@
   - title: "Optional User Engagement Workshop in Chicago" 
     text: "Join an incredible group of TOP participants in an interactive workshop to get a deeper understanding of how the program will unfold, and a preview of the next 12 weeks."
     date: 2021-07-02
-- startdate: 2021-07-08
+- title: Week 1
+  startdate: 2021-07-08
   enddate: 2021-07-12
   events: 
   - title: "Problem Statement Orientation"
@@ -16,18 +18,21 @@
   - title: "User Research" 
     text: "In parallel to learning about the problem statements, learn more about the communities that are most affected by them and what their experiences, needs and challenges are like"
     date: 
-- startdate: 2021-07-15
+- title: Week 2
+  startdate: 2021-07-15
   enddate: 2021-07-19
   events: 
   - title: "User Research Milestone"
     text: "Teams join the virtual milestone to share findings from user research that will inform the design of their product, and connect with user advocates to get feedback" 
     date: 2021-07-18
-- startdate: 2021-07-22
+- title: Week 3
+  startdate: 2021-07-22
   enddate: 2021-07-26
   events: 
   - title: "User Research + Data Exploration"
     text: "Teams continue to conduct user research and begin to explore available data sets" 
-- startdate: 2021-07-29
+- title: Week 4
+  startdate: 2021-07-29
   enddate: 2021-08-02
   events: 
   - title: "Continue Data Exploration"
@@ -36,31 +41,36 @@
   - title: "Data Dive Milestone" 
     text: "Teams join the virtual milestone to hear from data stewards and ask questions on available data sets"
     date: 2021-08-01 
-- startdate: 2021-08-05
+- title: Week 5
+  startdate: 2021-08-05
   enddate: 2021-08-09
   events: 
   - title: "Data Exploration & Product Development"
     text: "Teams explore available data sets, connect with data stewards, and begin scoping/developing products" 
     date: 
-- startdate: 2021-08-12
+- title: Week 6
+  startdate: 2021-08-12
   enddate: 2021-08-16
   events: 
   - title: "Alpha Demo Milestone"
     text: "Participants come together for a virtual demo of the tools in progress. Teams share concepts and wireframes, and get feedback from user advocates, data stewards, and product experts." 
     date: 2021-08-15
-- startdate: 2021-08-19
+- title: Week 7
+  startdate: 2021-08-19
   enddate: 2021-08-23
   events: 
   - title: "Product Development & User Testing"
     text: "Teams continue building products and collect user feedback" 
     date: 
-- startdate: 2021-08-26
+- title: Week 8
+  startdate: 2021-08-26
   enddate: 2021-08-30
   events: 
   - title: "Beta Demos Milestone"
     text: "Teams come together to showcase and share feedback on more mature versions of their products. Typically, tools have reached at least wireframes and have some functioning features." 
     date: 2021-08-29
-- startdate: 2021-09-02
+- title: Week 9
+  startdate: 2021-09-02
   enddate: 2021-09-06
   events: 
   - title: "Product Development & User Testing"
@@ -69,13 +79,15 @@
   - title: "Labor Day" 
     text: ""
     date: 2021-09-02 
-- startdate: 2021-09-16
+- title: Week 10
+  startdate: 2021-09-16
   enddate: 2021-09-20
   events: 
   - title: "Product Development"
     text: "Teams continue building prototypes/products" 
     date: 
-- startdate: 2021-09-23
+- title: Week 11
+  startdate: 2021-09-23
   enddate: 2021-09-27
   events: 
   - title: "Present final MVPs"
