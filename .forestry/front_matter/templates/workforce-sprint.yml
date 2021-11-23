@@ -6,6 +6,11 @@ fields:
   name: Timeline
   label: Timeline
   fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: title
   - type: datetime
     name: startdate
     label: startdate
