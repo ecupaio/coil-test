@@ -51,6 +51,8 @@ fields:
     label: startdate
     config:
       export_format: YYYY-MM-DD
+      date_format: MM DD YYYY
+      time_format: ''
   - type: datetime
     name: enddate
     label: enddate
