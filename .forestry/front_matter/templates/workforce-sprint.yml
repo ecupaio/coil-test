@@ -58,6 +58,7 @@ fields:
     label: enddate
     config:
       export_format: YYYY-MM-DD
+      date_format: MM DD YYYY
   - type: field_group_list
     name: events
     label: events
