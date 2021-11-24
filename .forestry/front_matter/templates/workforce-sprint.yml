@@ -75,5 +75,6 @@ fields:
         date_format: 
         time_format: 
         display_utc: false
+        export_format: YYYY-MM-DD
   config:
     labelField: title
