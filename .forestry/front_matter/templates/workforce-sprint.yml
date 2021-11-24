@@ -81,3 +81,5 @@ fields:
         export_format: YYYY-MM-DD
   config:
     labelField: title
+pages:
+- _pages/home.html
